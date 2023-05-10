@@ -6,5 +6,9 @@
 
 - Git Clone the project
 - `cd expense-tracker`
-- `npm install`
-- `npm run dev`
+- `pnpm install`
+- `pnpm run dev`
+
+## UI
+
+<img src="./assets/ui.png" >
