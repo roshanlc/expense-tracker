@@ -77,7 +77,7 @@ export default function ExpenseForm(props) {
   }
 
   return (
-    <Sheet variant="outlined" color="neutral" sx={{ p: 2 }}>
+    <Sheet variant="outlined" color="neutral" sx={{ p: 2, mt: 3, mb: 2 }}>
       <form onSubmit={addExpenseHandler}>
         <FormControl fullWidth>
           <InputLabel htmlFor="title">Title</InputLabel>

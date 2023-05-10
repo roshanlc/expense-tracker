@@ -8,7 +8,11 @@ export default function ExpenseItem(props) {
   const day = date.toLocaleString('en-US', { day: '2-digit' })
 
   return (
-    <Paper variant="outlined" square sx={{ p: 3, m: 1 }}>
+    <Paper
+      variant="outlined"
+      square
+      sx={{ p: 3, m: 1, maxWidth: 'max-content' }}
+    >
       <Stack
         spacing={5}
         direction={'row'}
@@ -18,9 +22,9 @@ export default function ExpenseItem(props) {
         }}
       >
         <Stack direction={'column'} spacing={1} sx={{ border: '' }} flex={'2'}>
-          <Typography fontSize="lg">{year}</Typography>
-          <Typography fontSize="lg">{day}</Typography>
-          <Typography fontSize="lg">{month}</Typography>
+          <Typography fontSize="lg">{props.date.year}</Typography>
+          <Typography fontSize="lg">{props.date.day}</Typography>
+          <Typography fontSize="lg">{props.date.month}</Typography>
         </Stack>
 
         <Typography fontSize="lg" flex={'2'}>
@@ -35,7 +39,9 @@ export default function ExpenseItem(props) {
           spacing={1}
           sx={{ justifyContent: 'center', justifyItems: 'center' }}
         >
-          <Button variant="outlined">Delete</Button>
+          <Button variant="outlined" onClick={props.deleteAction}>
+            Delete
+          </Button>
         </Stack>
       </Stack>
     </Paper>

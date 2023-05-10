@@ -1,0 +1,8 @@
+.expense-home {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
